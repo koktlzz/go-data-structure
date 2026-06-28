@@ -16,6 +16,6 @@ func main() {
 	array.Append("b") // ["a","b"]
 	array.Append("c") // ["a","b","c"]
 	array.Delete(1)   // ["a","c"]
-	fmt.Println(array.Find("c"))
+	array.Find("c")   // 1
 	array.Traverse(func(s string) { fmt.Println(s) })
 }

@@ -16,13 +16,13 @@ func NewUnsortedArray[T comparable](maxSize int) (*UnsortedArray[T], error) {
 	}
 	return &UnsortedArray[T]{
 		arr:     make([]T, maxSize),
-		maxSize: maxSize,
 		size:    0,
+		maxSize: maxSize,
 	}, nil
 }
 
 func (ua *UnsortedArray[T]) Append(newEntry T) error {
-	if ua.size >= len(ua.arr) {
+	if ua.size >= ua.maxSize {
 		return fmt.Errorf("The array is already full.")
 	}
 	ua.arr[ua.size] = newEntry
