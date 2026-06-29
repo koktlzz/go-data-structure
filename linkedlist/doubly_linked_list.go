@@ -33,6 +33,10 @@ func (n *dnode[T]) prepend(preNode *dnode[T]) {
 	}
 }
 
+func NewDoublyLinkedList[T comparable]() *DoublyLinkedList[T] {
+	return &DoublyLinkedList[T]{}
+}
+
 func (dll *DoublyLinkedList[T]) InsertInFront(data T) {
 	oldHead := dll.head
 	if oldHead == nil {
