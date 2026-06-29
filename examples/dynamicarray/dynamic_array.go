@@ -1,17 +1,11 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/koktlzz/go-data-structure/arrays"
 )
 
 func main() {
-	array, err := arrays.NewDynamicArray[string](2)
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
+	array, _ := arrays.NewDynamicArray[string](2)
 
 	array.Insert("a") // ["a"]
 	array.Insert("b") // ["a", "b"]

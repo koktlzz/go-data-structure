@@ -7,11 +7,8 @@ import (
 )
 
 func main() {
-	array, err := arrays.NewUnsortedArray[string](5)
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
+	array, _ := arrays.NewUnsortedArray[string](5)
+
 	array.Append("a") // ["a"]
 	array.Append("b") // ["a","b"]
 	array.Append("c") // ["a","b","c"]

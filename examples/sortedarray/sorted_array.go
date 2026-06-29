@@ -1,17 +1,12 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/koktlzz/go-data-structure/arrays"
 )
 
 func main() {
-	array, err := arrays.NewSortedArray[string](5)
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
+	array, _ := arrays.NewSortedArray[string](5)
+
 	array.Insert("a")       // ["a"]
 	array.Insert("c")       // ["a","c"]
 	array.Insert("b")       // ["a","b","c"]
